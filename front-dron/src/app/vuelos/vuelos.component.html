@@ -1,0 +1,50 @@
+<div class="vuelos-pendientes-container">
+  <h2>Vuelos Pendientes</h2>
+  <div class="filtros">
+    <div *ngIf="menusDesplegables.nro_plan" class="menus_desplegables">
+      <label (click)="mostrarMenu('nro_plan')">Número de Plan:</label>
+      <input type="text" (ngModel)="filtros.nro_plan" (input)="aplicarFiltros()">
+    </div>
+    
+    <div *ngIf="menusDesplegables.nombre_plan" class="menus_desplegables">
+      <label (click)="mostrarMenu('nombre_plan')">Nombre de Plan:</label>
+      <input type="text" (ngModel)="filtros.nombre_plan" (input)="aplicarFiltros()">  
+    </div>
+    
+    <div *ngIf="menusDesplegables.seq_vuelo" class="menus_desplegables">
+      <label (click)="mostrarMenu('seq_vuelo')">Secuencia de Vuelo:</label>
+      <input type="text" (ngModel)="filtros.seq_vuelo" (input)="aplicarFiltros()">
+    </div>
+    
+    <div *ngIf="menusDesplegables.prioridad" class="menus_desplegables">
+      <label (click)="mostrarMenu('prioridad')">Prioridad:</label>
+      <input type="text" (ngModel)="filtros.prioridad" (input)="aplicarFiltros()">
+    </div>
+    
+    <div *ngIf="menusDesplegables.status" class="menus_desplegables">
+      <label (click)="mostrarMenu('status')">Status:</label>
+      <input type="text" (ngModel)="filtros.status" (input)="aplicarFiltros()">
+    </div>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th (click)="mostrarMenu('seq_vuelo')">Secuencia de vuelo</th>
+        <th (click)="mostrarMenu('nro_plan')">Plan de mantenimiento</th>
+        <th (click)="mostrarMenu('nombre_plan')">Nombre del plan</th>
+        <th (click)="mostrarMenu('prioridad')">Prioridad</th>
+        <th (click)="mostrarMenu('status')">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vuelo of vuelosFiltrados">
+        <td>{{ vuelo.seq_vuelo }}</td>
+        <td>{{ vuelo.nro_plan }}</td>
+        <td>{{ vuelo.nombre_plan }}</td>
+        <td>{{ vuelo.prioridad }}</td>
+        <td>{{ vuelo.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click)="ejecutarPlan()">Seleccionar Plan</button>
+</div>

@@ -1,0 +1,44 @@
+<div style="display: flex;">
+  <div style="background: #dbdbdb">
+    <button mat-icon-button (click)="toggleMenU()">
+      <mat-icon>{{menuOpen ? 'chevron_left' : 'chevron_right'}}</mat-icon>
+    </button>
+  </div>
+  <mat-sidenav-container class="container">
+    <mat-sidenav  mode='side' [opened]="menuOpen" class="drawer">
+      <mat-nav-list>
+        <ul class="menu-lateral">
+          <li><a routerLinkActive="activebutton" routerLink="/sap/dron"><mat-icon color="primary">drone</mat-icon> Drone
+              Identification</a></li>
+          <li><a routerLinkActive="activebutton" routerLink="/sap/flight-information"><mat-icon
+                currentColor="blue">flight</mat-icon> Flight Information</a></li>
+          <li><a routerLinkActive="activebutton" routerLink="/sap/pilot-information"><mat-icon>person</mat-icon> Pilot
+              Information</a></li>
+          <li><a routerLinkActive="activebutton"
+              routerLink="/sap/performance-information"><mat-icon>airplane_ticket</mat-icon> Flight Performance
+              Information</a></li>
+          <li><a routerLinkActive="activebutton"
+              routerLink="/sap/maintence-task-information"><mat-icon>plumbing</mat-icon> Maintenance Task
+              Information</a></li>
+          <li><a routerLinkActive="activebutton" routerLink="/sap/weather-condition"><mat-icon>air</mat-icon>Weather
+              Conditions</a></li>
+          <li><a routerLinkActive="activebutton" routerLink="/sap/ai-metrics-information"><mat-icon>hub</mat-icon>AI
+              Performance Metrics</a></li>
+          <li><a routerLinkActive="activebutton"
+              routerLink="/sap/object-status-evaluation"><mat-icon>data_object</mat-icon>Object Status Evaluation</a>
+          </li>
+          <li><a routerLinkActive="activebutton"
+              routerLink="/sap/safety-and-compliance"><mat-icon>health_and_safety</mat-icon>Safety & Compliance</a></li>
+          <li><a routerLinkActive="activebutton"
+              routerLink="/sap/maintence-insight-and-recomendations"><mat-icon>analytics</mat-icon>Maintenance Insights
+              & Recommendations</a></li>
+          <li><a routerLinkActive="activebutton"
+              routerLink="/sap/attachments"><mat-icon>attachment</mat-icon>Attachments</a></li>
+        </ul>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

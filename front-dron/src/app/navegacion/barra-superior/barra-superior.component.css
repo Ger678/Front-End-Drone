@@ -1,0 +1,68 @@
+nav {
+    background-color: #3B8ED0; /* Color celeste claro */
+    padding: 15px;
+    position: absolute; /* Establece la posición absoluta */
+    top: 0; /* Coloca la barra superior en la parte superior de su contenedor */
+    left: 0; /* Coloca la barra superior en el extremo izquierdo de su contenedor */
+    right: 0; /* Coloca la barra superior en el extremo derecho de su contenedor */
+    z-index: 2; /* Establece la posición en la pila de capas para superponerla */
+    box-shadow: 2px 0px 8px rgba(0, 0, 0, 0.15); /* Agrega sombra a la barra lateral */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ffffff; /* Color de texto */
+    padding: 5px 10px;
+  }
+  
+  a:hover {
+    background-color: #B3E5FC; /* Color celeste más oscuro al pasar el cursor */
+    text-decoration: none;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .logo-container img {
+    width: 100px; /* Ajusta el tamaño del logo según tus necesidades */
+    margin-left: 20px;
+  }
+  
+  .tabs {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tabs li {
+    margin-right: 10px;
+  }
+  
+  .dropdown-container {
+    position: relative;
+  }
+  
+  .dropdown-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #B3E5FC;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }

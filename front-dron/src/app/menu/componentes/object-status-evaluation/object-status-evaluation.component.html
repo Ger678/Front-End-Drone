@@ -1,0 +1,29 @@
+<div class="object-status-info">
+    <h2>Object Status Evaluation</h2>
+    <ul *ngFor="let object of objectStatuses">
+      <li>
+        <strong>Object ID:</strong> {{ object.objectID }}
+        <br>
+        <strong>Object Description:</strong> {{ object.objectDescription }}
+        <br>
+        <strong>Object Coordinates:</strong> {{ object.objectCoordinates }}
+        <br>
+        <strong>Images Captured:</strong> {{ object.imagesCaptured }}
+        <br>
+        <strong>Pre-Inspection Status:</strong> {{ object.preInspectionStatus }}
+        <br>
+        <strong>Post-Inspection Status:</strong> {{ object.postInspectionStatus }}
+        <br>
+        <strong>Change Detected:</strong> {{ object.changeDetected }}
+        <br>
+        <strong>Details of Change:</strong> {{ object.detailsOfChangeDetected }}
+        <br>
+        <strong>Image Recognition Confidence:</strong> {{ object.imageRecognitionConfidenceLevel }}%
+        <br>
+        <strong>Suggested Maintenance Actions:</strong> {{ object.suggestedMaintenanceActions }}
+        <br>
+        <strong>Maintenance Priority:</strong> {{ object.maintenancePriority }}
+      </li>
+    </ul>
+  </div>
+  

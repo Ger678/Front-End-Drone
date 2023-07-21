@@ -1,0 +1,14 @@
+<div class="flight-info">
+    <h2>Flight Information</h2>
+    <ul *ngFor="let flight of flights">
+        <li>
+            <strong>Flight ID:</strong> {{ flight.flightID }}
+            <br>
+            <strong>Flight Date:</strong> {{ flight.flightDate | date }}
+            <br>
+            <strong>Flight Duration:</strong> {{ flight.flightDuration }}
+            <br>
+            <strong>Flight Path Coordinates:</strong> {{ flight.flightPathCoordinates }}
+        </li>
+    </ul>
+</div>

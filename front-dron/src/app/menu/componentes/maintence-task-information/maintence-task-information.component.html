@@ -1,0 +1,15 @@
+<div class="maintenance-task-info">
+    <h2>Maintenance Task Information</h2>
+    <ul *ngFor="let task of maintenanceTasks">
+      <li>
+        <strong>Task ID:</strong> {{ task.taskID }}
+        <br>
+        <strong>Task Description:</strong> {{ task.taskDescription }}
+        <br>
+        <strong>Task Status:</strong> {{ task.taskStatus }}
+        <br>
+        <strong>Images Captured:</strong> {{ task.imagesCaptured }}
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,44 @@
+ul{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+li{
+  margin-top: 25px;
+  list-style: none;
+}
+
+li :active{
+  border-radius: 10px;
+}
+
+li a {
+  text-decoration: none;
+  color: black ;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+li a mat-icon {
+  margin-right: 10px;
+  color: #3B8ED0;
+}
+
+mat-sidenav-content {
+  padding: 40px;
+  background: white;
+}
+
+.container {
+
+  height: 900px;
+  flex: 1 auto;
+}
+.drawer{
+  background: #f9f9f9;
+}
+
+
+  /* Agrega cualquier otro estilo necesario para la barra lateral */
+  
