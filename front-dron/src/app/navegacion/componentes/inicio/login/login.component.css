@@ -11,3 +11,13 @@
     align-items: center;
   }
   
+  .logo{
+    font-size: 150px;
+    height: 150px;
+    width: 150px;
+    color:#3B8ED0;
+    font-variation-settings:   'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }

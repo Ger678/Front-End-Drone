@@ -11,20 +11,26 @@ import { ObjectStatusEvaluationComponent } from './menu/componentes/object-statu
 import { SafetyAndComplianceComponent } from './menu/componentes/safety-and-compliance/safety-and-compliance.component';
 import { MaintenceInsightsAndRecomendationsComponent } from './menu/componentes/maintence-insights-and-recomendations/maintence-insights-and-recomendations.component';
 import { AttachmentsComponent } from './menu/componentes/attachments/attachments.component';
+import { SAPComponent } from './navegacion/componentes/sap/sap.component';
+import { InicioComponent } from './navegacion/componentes/inicio/inicio.component';
 
 const routes: Routes = [
-  { path: 'sap/dron', component: DronInformationComponent },
-  { path: 'sap/flight-information', component: FlightInformationComponent},
-  { path: 'sap/pilot-information', component: PilotInformationComponent},
-  { path: 'sap/performance-information', component: PerformanceInformationComponent},
-  { path: 'sap/maintence-task-information', component: MaintenceTaskInformationComponent},
-  { path: 'sap/weather-condition', component: WeatherConditionsComponent},
-  { path: 'sap/ai-metrics-information', component: AiMaintenceMetricsComponent},
-  { path: 'sap/object-status-evaluation', component: ObjectStatusEvaluationComponent},
-  { path: 'sap/safety-and-compliance', component: SafetyAndComplianceComponent},
-  { path: 'sap/maintence-insight-and-recomendations', component: MaintenceInsightsAndRecomendationsComponent},
-  { path: 'sap/attachments', component: AttachmentsComponent},
-  { path: '', redirectTo: '/inicio', pathMatch: 'full' }
+  { path: '', redirectTo: '/inicio', pathMatch: 'full'},
+  { path: 'inicio', component: InicioComponent},
+  { path: 'sap', component: SAPComponent, 
+    children: [
+      { path: 'sap/dron', component: DronInformationComponent},
+      { path: 'sap/flight-information', component: FlightInformationComponent},
+      { path: 'sap/pilot-information', component: PilotInformationComponent},
+      { path: 'sap/performance-information', component: PerformanceInformationComponent},
+      { path: 'sap/maintence-task-information', component: MaintenceTaskInformationComponent},
+      { path: 'sap/weather-condition', component: WeatherConditionsComponent},
+      { path: 'sap/ai-metrics-information', component: AiMaintenceMetricsComponent},
+      { path: 'sap/object-status-evaluation', component: ObjectStatusEvaluationComponent},
+      { path: 'sap/safety-and-compliance', component: SafetyAndComplianceComponent},
+      { path: 'sap/maintence-insight-and-recomendations', component: MaintenceInsightsAndRecomendationsComponent},
+      { path: 'sap/attachments', component: AttachmentsComponent},
+    ]},  
 ];
 
 @NgModule({

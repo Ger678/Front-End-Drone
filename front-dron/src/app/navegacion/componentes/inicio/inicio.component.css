@@ -1,21 +1,28 @@
 app-login{
-    position: absolute;
-    top: 149px;
-    left: 975px;
+    position: relative;
+    left: 560px;
 }
 .inicio-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #8ac1f7 50%, #ffffff 50%);
+    background: linear-gradient(to right, #8ac1f7 100%, #ffffff 50%);
   }  
 
 .titulo-background {
   position: absolute;
-  color: #f5e5e5a8;
+  color: #3B8ED0;
   font-size: 300px;
-  opacity: 25%;
+  left: 0;
+  mix-blend-mode: multiply;
+  opacity: 60%;
+}
+
+.titulo-drones{
+  position: absolute;
+  color: #105EFB;
+  font-size: 300px;
 }
 
 .titulo-dron {
@@ -24,14 +31,11 @@ app-login{
   left: 50%;
   transform: translate(-50%, -50%);
   color: #105EFB;
-  font-size: 30px;
   /* text-align: center; */
   /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);*/
 }
 
 .imagen-dron {
-  top: -124px;
-  left: -515px;
   position: relative;
   width: 450px;
   height: 300px;
@@ -41,34 +45,10 @@ app-login{
   z-index: 1;
 }
 
-.container-lineas{
+.imagen-back{
   position: absolute;
-  top: 5px;
-  left: -700px;
-  width: 200px;
-}
-
-.lineas1{
-  width: 100%;
-  height: 10px;
-  background: #8AC1F7;
-  position: absolute;
-  top: 70px;
-  left: 1437px;
-}
-.lineas2{
-  width: 80%;
-  height: 10px;
-  background: #8AC1F7;
-  position: absolute;
-  top: 90px;
-  left: 1437px;
-}
-.lineas3{
-  width: 60%;
-  height: 10px;
-  background: #8AC1F7;
-  position: absolute;
-  top: 110px;
-  left: 1437px;
+  height: 100vh;
+  top: 0;
+  left: -496px;
+  mix-blend-mode: luminosity;
 }

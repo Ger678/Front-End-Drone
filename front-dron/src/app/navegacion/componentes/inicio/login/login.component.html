@@ -1,5 +1,6 @@
 <mat-card class="card">
     <form class="inicio-sesion-form" (submit)="onSubmit()">
+        <mat-icon class="logo" >person</mat-icon>
         <mat-form-field>
             <mat-label apparence="fill">Usuario</mat-label>
             <input matInput [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
