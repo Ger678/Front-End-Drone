@@ -7,13 +7,12 @@ app-login{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #8ac1f7 100%, #ffffff 50%);
   }  
 
 .titulo-background {
   position: absolute;
   color: #3B8ED0;
-  font-size: 300px;
+  font-size: 295px;
   left: 0;
   mix-blend-mode: multiply;
   opacity: 60%;
@@ -43,12 +42,15 @@ app-login{
   background-size: cover;
   background-position: center;
   z-index: 1;
+  left: 495px;
+  top: -148px;
+  filter: drop-shadow(3px 4px 8px black);
 }
 
 .imagen-back{
   position: absolute;
   height: 100vh;
   top: 0;
-  left: -496px;
-  mix-blend-mode: luminosity;
+  left: -438px;
+  filter: hue-rotate(290deg);
 }
