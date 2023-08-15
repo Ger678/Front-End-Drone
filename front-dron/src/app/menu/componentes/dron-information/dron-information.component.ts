@@ -9,13 +9,18 @@ export interface Dron {
   fechaAdquisicion: Date;
 }
 
+
 @Component({
   selector: 'app-dron-information',
   templateUrl: './dron-information.component.html',
   styleUrls: ['./dron-information.component.css']
 })
 
+
 export class DronInformationComponent {
+
+  dronInformacion = document.getElementById('dron-info-component');
+
 
   dron: Dron = {
     nombre: 'Mi Dron',
@@ -27,4 +32,3 @@ export class DronInformationComponent {
     // Agrega más propiedades según sea necesario
   };
 }
-

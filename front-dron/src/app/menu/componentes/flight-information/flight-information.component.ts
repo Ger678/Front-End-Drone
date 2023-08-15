@@ -27,4 +27,6 @@ export class FlightInformationComponent {
     flightPathCoordinates: 'lat4,lon4;lat5,lon5;lat6,lon6'
   },
   ]
+
+  flightInformation = document.getElementById('flight-info-component');
 }
