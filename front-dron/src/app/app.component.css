@@ -1,0 +1,6 @@
+body {
+    min-width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

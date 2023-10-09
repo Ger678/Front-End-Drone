@@ -1,5 +1,5 @@
 nav {
-    background-color: #3B8ED0; /* Color celeste claro */
+    background: linear-gradient(90deg, #3371D9 20%, #66B3FF 80%);
     padding: 15px;
     position: absolute; /* Establece la posición absoluta */
     top: 0; /* Coloca la barra superior en la parte superior de su contenedor */

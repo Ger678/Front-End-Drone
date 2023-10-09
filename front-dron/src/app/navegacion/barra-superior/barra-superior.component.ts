@@ -15,9 +15,9 @@ export class BarraSuperiorComponent implements OnInit, AfterViewInit {
   rutaActual: string = '';
   pestaniaSap: boolean = false;
   @Output() sapTabClick: EventEmitter<any> = new EventEmitter();
-  @ViewChild ('app-dron-information') _dronInformation!: DronInformationComponent;
-  @ViewChild ('app-flight-information') _flightInformation!: FlightInformationComponent;
-  @ViewChild ('app-pilot-information') _pilot!: PilotInformationComponent;
+  @ViewChild (DronInformationComponent) _dronInformation!: DronInformationComponent;
+  @ViewChild (FlightInformationComponent) _flightInformation!: FlightInformationComponent;
+  @ViewChild (PilotInformationComponent) _pilot!: PilotInformationComponent;
 
   constructor(
     private route: Router, 
@@ -40,47 +40,62 @@ export class BarraSuperiorComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     console.log("dron", this._dronInformation);
-    console.log("flight", this._flightInformation);
-    console.log("pilot", this._pilot);
+    console.log("flight", this._flightInformation.flights);
+    console.log("pilot", this._pilot.pilots);
   }
 
   mostrarMenuSapClick() {
     this.sapTabClick.emit(false);
   }
 
+  // Create and download PDF
+
   downloadPDF(): void {
+    // create an instance
     const doc = new jsPDF();
     let input = document.getElementById('print');
     // elementos del DOM
     let dron = this._dronInformation;
-    let flightInfo = this._flightInformation;
-    const pilot = this._pilot;
+    let flightInfo = this._flightInformation.flights;
+    const pilot = this._pilot.pilots;
 
     var elements = [dron, flightInfo, pilot];
+
+    doc.internal.scaleFactor = 2.25;
+
+    console.log()
+  //   html2canvas(img).then(function (canvas) {
+  //     var imgData = canvas.toDataURL("image/png");
+  //     document.body.appendChild(canvas);
+  //     doc.addImage(imgData, 'PNG', 10, 10, 190, 190);
+  //     doc.save();
+  // });
     
-    async function generatePages(elements: any[]){
-      for (let i = 0; i !== elements.length; i++){
-        document.getElementById(elements[i])!;
-        input = document.createElement("print");
-        await processPage(input, i, elements.length -1);
-      }
-    }
-    function processPage(input: any, index: any, end:any){
-      const formatPage = (canvas:any)=>{
-        const imgData = canvas.toDataURL('assets/img');
-        doc.addImage(imgData, 'JPEG', 10, 10, 200, 100, '', 'FAST', 0);
-      }
-      return html2canvas(input).then(canvas => {
-      formatPage(canvas);
-      if (index !== end) {
-        doc.addPage();
-      } else {
-        doc.save('download.pdf');
-      }
-    })
-    };
-    generatePages(elements);
-    console.log(elements);
+    
+    // function generatePages(elements: any[]){
+    //   for (let i = 0; i !== elements.length; i++){
+    //     document.getElementById(elements[i])!;
+    //     input = document.createElement("input");
+    //     processPage(input, i, elements.length -1);
+    //   }
+    // }
+    // function processPage(input: any, index: any, end:any){
+    //   const formatPage = (canvas:any)=>{
+    //     const imgData = canvas.toDataURL('assets/img');
+    //     doc.addImage(imgData, 'JPEG', 10, 10, 200, 100, '', 'FAST', 0);
+    //   }
+    //   return html2canvas(input).then(canvas => {
+    //   formatPage(canvas);
+    //   doc.save("dowload.pdf")
+    //   if (index < end) {
+    //     doc.addPage();
+    //   } else {
+    //     doc.save('download.pdf');
+    //   }
+    // })
+    // };
+    // generatePages(elements);
+    // console.log(elements);
     // html2canvas(elements).then((canvas)=>{
     //   const imageData = canvas.toDataURL('assets/img');
     //   doc.addImage(imageData, 'PNG', 10, 10, 190, 190);

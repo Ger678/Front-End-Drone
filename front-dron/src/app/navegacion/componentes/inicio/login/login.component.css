@@ -1,8 +1,13 @@
 .card {
+  display: flex;
     width: 369px;
     margin: 38px auto;
     padding: 50px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+flex: 1 0 0;
+align-self: stretch;
+border-radius: 30px;
+background: #FBFCFE;
+box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.05), -4px -4px 10px 0px rgba(0, 0, 0, 0.05);
   }
   
   .inicio-sesion-form {

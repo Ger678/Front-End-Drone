@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import html2canvas from 'html2canvas';
+
 
 export interface Dron {
   nombre: string;
@@ -19,7 +21,7 @@ export interface Dron {
 
 export class DronInformationComponent {
 
-  dronInformacion = document.getElementById('dron-info-component');
+  dronInformacion: any ;
 
 
   dron: Dron = {
@@ -31,4 +33,7 @@ export class DronInformationComponent {
     fechaAdquisicion: new Date('2023-07-15')
     // Agrega más propiedades según sea necesario
   };
+
+  ngOnInit() {
+  }
 }

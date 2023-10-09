@@ -1,10 +1,31 @@
-<div class="inicio-container">
-  <div class="imagen-dron">  </div>
-  <div ><img class="imagen-back" src="https://zetech-statics.s3.us-east-1.amazonaws.com/turecibo/media/custom/login/dlconsultores_bg.jpg"></div>
-  <h1 class="titulo-background">DL DRONES</h1>
-  <app-login></app-login>
+<div style="display: flex; justify-content: center; align-items: center; background-image: url('https://zetech-statics.s3.us-east-1.amazonaws.com/turecibo/media/custom/login/dlconsultores_bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;">
+  <div class="main-container" style="margin-top:60px">
+    <div class="inicio-container">
+      <!-- <div class="imagen-dron">  </div> -->
+      <!-- <div ><img class="imagen-back" src="https://zetech-statics.s3.us-east-1.amazonaws.com/turecibo/media/custom/login/dlconsultores_bg.jpg"></div> -->
+      <!-- <h1 class="titulo-background">DL DRONES</h1> -->
+      <div class="inicio-container-text">
+        <img class="imagen-dron" src="assets/img/unnamed.png">
+        <h2 style="font-weight: 500;">Visualiza Resportes, Modelos IA, Entrenamientos. </h2>
+        <h3 style="font-weight: 100;">Esta pagina esta pensada para el entrenamiento y presentacion comercial de la experiencia en del producto. </h3>
+      </div>
+    </div>
+    <div class="login">
+      <app-login style="display: flex;
+      width: 509.09px;
+      padding-bottom: 0px;
+      flex-direction: column;
+      align-items: flex-start;
+      flex-shrink: 0;
+      align-self: stretch;"></app-login>
+    </div>
+  </div>
 </div>
-
+  
 
 <!-- <ngx-typed-js class="titulo-dron" [strings]="['Consultores', 'Drones','Futuro']" [typeSpeed]="150" [loop]="true">
   DL <span class="typing"></span>

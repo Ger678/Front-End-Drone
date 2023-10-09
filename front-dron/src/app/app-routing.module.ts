@@ -13,10 +13,14 @@ import { MaintenceInsightsAndRecomendationsComponent } from './menu/componentes/
 import { AttachmentsComponent } from './menu/componentes/attachments/attachments.component';
 import { SAPComponent } from './navegacion/componentes/sap/sap.component';
 import { InicioComponent } from './navegacion/componentes/inicio/inicio.component';
+import { HomeComponent } from './navegacion/componentes/home/home.component'
+import { ReportComponent } from './navegacion/componentes/report/report.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full'},
   { path: 'inicio', component: InicioComponent},
+  { path: 'home', component: HomeComponent},
+  { path: 'report', component: ReportComponent},
   { path: 'sap', component: SAPComponent, 
     children: [
       { path: 'sap/dron', component: DronInformationComponent},

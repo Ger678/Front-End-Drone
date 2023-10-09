@@ -1,13 +1,45 @@
-app-login{
-    position: relative;
-    left: 560px;
+
+.main-container{
+  display: flex;
+
+  padding: 16px 83px;
+  width: 1200px;
+  height: 587px;
+  max-width: 1200px;
+  max-height: 587px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.login{
+  display: flex;
+  width: 509.09px;
+  padding-bottom: 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  align-self: stretch;
 }
 .inicio-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  width: 690.91px;
+  padding: 89.17px 80px 134.19px 0px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  align-self: stretch;
   }  
+
+.inicio-container-text{
+  width: 610.91px;
+  height: 363.64px;
+  flex-shrink: 0;
+  color: white;
+}
+
+
 
 .titulo-background {
   position: absolute;
@@ -33,8 +65,15 @@ app-login{
   /* text-align: center; */
   /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);*/
 }
-
 .imagen-dron {
+  display: inline-flex;
+  padding-right: 0px;
+  align-items: flex-start;
+  width: 450px;
+}
+
+
+/* .imagen-dron {
   position: relative;
   width: 450px;
   height: 300px;
@@ -45,7 +84,8 @@ app-login{
   left: 495px;
   top: -148px;
   filter: drop-shadow(3px 4px 8px black);
-}
+} */
+
 
 .imagen-back{
   position: absolute;
