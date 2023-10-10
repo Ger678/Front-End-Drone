@@ -15,12 +15,16 @@ import { SAPComponent } from './navegacion/componentes/sap/sap.component';
 import { InicioComponent } from './navegacion/componentes/inicio/inicio.component';
 import { HomeComponent } from './navegacion/componentes/home/home.component'
 import { ReportComponent } from './navegacion/componentes/report/report.component';
+import { TrainComponent } from './navegacion/componentes/train/train.component';
+import { ModelsComponent } from './navegacion/componentes/models/models.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full'},
   { path: 'inicio', component: InicioComponent},
   { path: 'home', component: HomeComponent},
   { path: 'report', component: ReportComponent},
+  { path: 'train', component: TrainComponent},
+  { path: 'models', component: ModelsComponent},
   { path: 'sap', component: SAPComponent, 
     children: [
       { path: 'sap/dron', component: DronInformationComponent},

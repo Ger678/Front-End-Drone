@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.text{
+    width: 60%;
+    margin: 5px;
+}
+
+iframe{
+    width: 60%;
+    height: -webkit-fill-available;
+
+    border: none;
+}
+
+div.CodeMirror{
+    background: red !important;
+} 

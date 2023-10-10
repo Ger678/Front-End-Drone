@@ -42,6 +42,8 @@ import { VuelosComponent } from './vuelos/vuelos.component';
 import { LoginComponent } from './navegacion/componentes/inicio/login/login.component';
 import { HomeComponent } from './navegacion/componentes/home/home.component';
 import { ReportComponent } from './navegacion/componentes/report/report.component';
+import { TrainComponent } from './navegacion/componentes/train/train.component';
+import { ModelsComponent } from './navegacion/componentes/models/models.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,8 @@ import { ReportComponent } from './navegacion/componentes/report/report.componen
     LoginComponent,
     HomeComponent,
     ReportComponent,
+    TrainComponent,
+    ModelsComponent,
   ],
   imports: [
     BrowserModule,
