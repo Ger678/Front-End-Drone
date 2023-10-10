@@ -31,8 +31,7 @@ mat-sidenav-content {
 }
 
 .container {
-
-  height: 900px;
+  height: -webkit-fill-available;
   flex: 1 auto;
 }
 .drawer{

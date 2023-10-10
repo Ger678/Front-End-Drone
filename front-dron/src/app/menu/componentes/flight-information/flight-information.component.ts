@@ -19,13 +19,7 @@ export class FlightInformationComponent {
     flightDate: new Date('2023-07-25'),
     flightDuration: '1 hora',
     flightPathCoordinates: 'lat1,lon1;lat2,lon2;lat3,lon3',
-  },
-  {
-    flightID: 'F002',
-    flightDate: new Date('2023-07-26'),
-    flightDuration: '45 minutos',
-    flightPathCoordinates: 'lat4,lon4;lat5,lon5;lat6,lon6'
-  },
+  }
   ]
 
   flightInformation = document.getElementById('flight-info-component');

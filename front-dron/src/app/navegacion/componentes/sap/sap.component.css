@@ -1,5 +1,6 @@
 .sap-container{
     display: flex;
+    height: -webkit-fill-available;
 }
 
 router-outlet {

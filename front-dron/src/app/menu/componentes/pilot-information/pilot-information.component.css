@@ -1,8 +1,21 @@
 .pilot-info {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+  }
+
+  .profile{
+    border-radius: 50%;
+    width: 100px;
+    align-self: center;
+  }
+
+  .qr-code{
+    width: 150px;
+    align-self: center;
   }
   
   h2 {

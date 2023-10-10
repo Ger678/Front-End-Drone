@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 export interface Pilot{
   pilotID: string;
   pilotName: string;
+  ANAC: string;
 }
 
 @Component({
@@ -14,11 +15,8 @@ export class PilotInformationComponent {
   pilots: Pilot[] = [
     {
       pilotID: 'P001',
-      pilotName: 'German Aguirre'
-    },
-    {
-      pilotID: 'P002',
-      pilotName: 'Juan Perez'
+      pilotName: 'German Aguirre',
+      ANAC: '12345-5'
     }
   ];
 }

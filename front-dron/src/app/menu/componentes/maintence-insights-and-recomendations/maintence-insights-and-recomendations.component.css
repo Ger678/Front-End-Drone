@@ -13,3 +13,8 @@
     margin-bottom: 10px;
   }
   
+  input{
+    margin-left: 10px;
+    padding-inline: 10px;
+    width: auto;
+  }

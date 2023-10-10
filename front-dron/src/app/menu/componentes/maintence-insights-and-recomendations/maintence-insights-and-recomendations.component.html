@@ -1,8 +1,9 @@
 <div class="maintenance-insights-info">
     <h2>Maintenance Insights & Recommendations</h2>
-    <p><strong>Critical Observations:</strong> {{ maintenanceInsights.criticalObservations }}</p>
-    <p><strong>Recommended Actions:</strong> {{ maintenanceInsights.recommendedActions }}</p>
-    <p><strong>Estimated Time for Next Maintenance:</strong> {{ maintenanceInsights.estimatedTimeForNextMaintenance }}</p>
-    <p><strong>Other Comments:</strong> {{ maintenanceInsights.otherComments }}</p>
+    <p><strong>Critical Observations:</strong> <input type="text" value="{{ maintenanceInsights.criticalObservations }}"> </p>
+    
+    <p><strong>Recommended Actions:</strong> <input type="text" value="{{ maintenanceInsights.recommendedActions }}"></p>
+    <p><strong>Estimated Time for Next Maintenance:</strong> <input type="week"> </p>
+    <p><strong>Other Comments:</strong> <input type="text" value="{{ maintenanceInsights.otherComments }}"> </p>
   </div>
   

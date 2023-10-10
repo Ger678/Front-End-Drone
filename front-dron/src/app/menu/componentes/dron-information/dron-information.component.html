@@ -1,9 +1,18 @@
 <div id="dron-info-component" class="dron-info">
-    <h2>{{ dron.nombre }}</h2>
-    <p><strong>Número de serie:</strong> {{ dron.numeroSerie }}</p>
-    <p><strong>Modelo:</strong> {{ dron.modelo }}</p>
-    <p><strong>Fabricante:</strong> {{ dron.fabricante }}</p>
-    <p><strong>Fecha de fabricación:</strong> {{ dron.fechaFabricacion | date }}</p>
-    <p><strong>Fecha de adquisición:</strong> {{ dron.fechaAdquisicion | date }}</p>
+    <div >
+        <div class="tittle">
+            <h2>{{ dron.nombre }}</h2>
+        </div>
+        <div style="display: flex;">
+            <div class="info">      
+                <p><strong>Número de serie:</strong> {{ dron.numeroSerie }}</p>
+                <p><strong>Modelo:</strong> {{ dron.modelo }}</p>
+                <p><strong>Fabricante:</strong> {{ dron.fabricante }}</p>
+                <p><strong>Inicio de Vuelo:</strong> {{ dron.inicioVuelo | date }}</p>
+                <p><strong>Aterrizaje:</strong> {{ dron.aterrizaje | date }}</p>
+            </div>
+            <img src="assets/dron.png" style="width: 400px; height: auto;">
+        </div>
+    </div>
     <!-- Agrega más elementos HTML para mostrar el resto de la información del dron -->
 </div>

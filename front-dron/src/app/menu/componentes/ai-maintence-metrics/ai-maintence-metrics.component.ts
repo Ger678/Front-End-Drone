@@ -15,4 +15,10 @@ export class AiMaintenceMetricsComponent {
     imageRecognitionSuccessRate: 90, // en porcentaje
     errorsIdentified: 5
   };
+
+  constructor(){}
+
+
+  results: any = 'assets/IA/results.png'; 
+  batch: string = 'assets/IA/val_batch1_pred.jpg';
 }

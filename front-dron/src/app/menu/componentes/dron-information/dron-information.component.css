@@ -5,11 +5,24 @@
     background-color: #f9f9f9;
   }
   
-  h2 {
-    color: #007bff;
-  }
-  
   p {
     margin-bottom: 10px;
   }
-  
+  .tittle{
+    display: flex;
+  }
+
+  .tittle h2{
+    inline-size: -webkit-fill-available;
+    color: #007bff;
+  }
+
+  .info p{
+    flex-grow: 1;
+  }
+
+  .info{
+    display: flex;
+    padding-inline: 20px;
+    flex-direction: column;
+  }

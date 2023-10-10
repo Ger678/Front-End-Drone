@@ -1,10 +1,15 @@
 <div class="pilot-info">
-    <h2>Pilot Information</h2>
+    <h2 style="align-self: flex-start;">Pilot Information</h2>
+    <img class="profile" src="assets/profile.png">
     <ul *ngFor="let pilot of pilots">
         <li>
+            <strong>Pilot Name:</strong> {{ pilot.pilotName }}
+            <br>
             <strong>Pilot ID:</strong> {{ pilot.pilotID }}
             <br>
-            <strong>Pilot Name:</strong> {{ pilot.pilotName }}
+            <strong>ANAC Code:</strong> {{ pilot.ANAC }}
         </li>
     </ul>
+
+    <img class="qr-code" src="assets/qr-code.png">
 </div>

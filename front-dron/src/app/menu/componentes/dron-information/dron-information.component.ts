@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 export interface Dron {
   nombre: string;
   numeroSerie: string;
   modelo: string;
   fabricante: string;
-  fechaFabricacion: Date;
-  fechaAdquisicion: Date;
+  inicioVuelo: Date;
+  aterrizaje: Date;
 }
 
 
@@ -21,14 +23,20 @@ export class DronInformationComponent {
 
   dronInformacion = document.getElementById('dron-info-component');
 
+  dronInfo() {
+    html2canvas(document.body).then(canvas => {
+        var imgData = canvas.toDataURL("image/png");
+        document.body.appendChild(canvas);
+    });
+  }
 
   dron: Dron = {
-    nombre: 'Mi Dron',
+    nombre: 'Dron DJI Air 2',
     numeroSerie: '123456789',
     modelo: 'Modelo XYZ',
-    fabricante: 'Fabricante ABC',
-    fechaFabricacion: new Date('2023-07-25'),
-    fechaAdquisicion: new Date('2023-07-15')
+    fabricante: 'Fabricante DL',
+    inicioVuelo: new Date('2023-07-25'),
+    aterrizaje: new Date('2023-07-15')
     // Agrega más propiedades según sea necesario
   };
 }
