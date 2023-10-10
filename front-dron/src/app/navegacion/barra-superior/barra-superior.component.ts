@@ -14,6 +14,9 @@ export class BarraSuperiorComponent implements OnInit {
   rutaActual: string = '';
   pestaniaSap: boolean = false;
   @Output() sapTabClick: EventEmitter<any> = new EventEmitter();
+  // @ViewChild (DronInformationComponent) _dronInformation!: DronInformationComponent;
+  // @ViewChild (FlightInformationComponent) _flightInformation!: FlightInformationComponent;
+  // @ViewChild (PilotInformationComponent) _pilot!: PilotInformationComponent;
 
   constructor(
     private route: Router, 
@@ -39,12 +42,20 @@ export class BarraSuperiorComponent implements OnInit {
     var data = this.data.getData()[0];
   }
 
+  ngAfterViewInit() {
+    // console.log("dron", this._dronInformation);
+    // console.log("flight", this._flightInformation.flights);
+    // console.log("pilot", this._pilot.pilots);
+  }
 
   mostrarMenuSapClick() {
     this.sapTabClick.emit(false);
   }
 
+  // Create and download PDF
+
   downloadPDF(): void {
+    // create an instance
     const doc = new jsPDF();
     doc.setFontSize(12);
 

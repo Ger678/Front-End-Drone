@@ -21,7 +21,7 @@ export interface Dron {
 
 export class DronInformationComponent {
 
-  dronInformacion = document.getElementById('dron-info-component');
+  dronInformacion: any ;
 
   dronInfo() {
     html2canvas(document.body).then(canvas => {
@@ -39,4 +39,7 @@ export class DronInformationComponent {
     aterrizaje: new Date('2023-07-15')
     // Agrega más propiedades según sea necesario
   };
+
+  ngOnInit() {
+  }
 }

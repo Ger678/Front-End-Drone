@@ -17,7 +17,7 @@ export class LoginComponent {
     const isAuthenticated = this.authService.login(this.username, this.password);
 
     if(isAuthenticated) {
-      this.route.navigate(['/sap'])
+      this.route.navigate(['/home'])
       console.log('Authent')
     }else {
       console.log('Login failed');

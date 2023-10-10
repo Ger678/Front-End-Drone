@@ -40,6 +40,8 @@ import { MaintenceInsightsAndRecomendationsComponent } from './menu/componentes/
 import { AttachmentsComponent } from './menu/componentes/attachments/attachments.component';
 import { VuelosComponent } from './vuelos/vuelos.component';
 import { LoginComponent } from './navegacion/componentes/inicio/login/login.component';
+import { HomeComponent } from './navegacion/componentes/home/home.component';
+import { ReportComponent } from './navegacion/componentes/report/report.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,8 @@ import { LoginComponent } from './navegacion/componentes/inicio/login/login.comp
     AttachmentsComponent,
     VuelosComponent,
     LoginComponent,
+    HomeComponent,
+    ReportComponent,
   ],
   imports: [
     BrowserModule,
